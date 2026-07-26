@@ -58,7 +58,7 @@ export function ChevronIcon({ className }: IconProps) {
       <path
         d="M9 5.5 15.5 12 9 18.5"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
       />

@@ -12,12 +12,15 @@ export type ContactPerson = {
 }
 
 export const siteConfig = {
-  name: 'FENIX NFC',
+  name: 'Fenix NFC',
   title: 'Fenix NFC — Контакты',
   description: 'Контакты Fenix NFC: телефон, Instagram и Telegram.',
   ogDescription: 'Свяжитесь с командой Fenix NFC удобным способом.',
   subtitle: 'Связаться с нами',
-  footer: 'Powered by Fenix NFC',
+  tagline: 'One tap. Share, connect, simplify.',
+  footerBrand: 'Fenix NFC',
+  footerTagline: 'NFC solutions for modern connections',
+  copyright: '© 2026 Fenix NFC',
   instagram: {
     handle: '@fenix.nfc',
     href: 'https://www.instagram.com/fenix.nfc/',

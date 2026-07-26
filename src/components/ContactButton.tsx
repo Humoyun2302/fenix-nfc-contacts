@@ -21,7 +21,6 @@ export function ContactButton({
   icon,
   actionLabel,
   external = false,
-  featured = false,
   className,
   ariaLabel,
 }: ContactButtonProps) {
@@ -29,8 +28,7 @@ export function ContactButton({
     <a
       href={href}
       className={cn(
-        'contact-link group flex min-h-[58px] w-full items-center gap-3.5 rounded-[1.1rem] px-3.5 py-3.5',
-        featured && 'contact-link-featured',
+        'contact-card group flex min-h-[92px] w-full items-center gap-4 rounded-[20px] px-4 py-4',
         className,
       )}
       aria-label={ariaLabel}
@@ -38,38 +36,28 @@ export function ContactButton({
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {})}
     >
-      <span
-        className={cn(
-          'flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.9rem] border border-white/14 bg-white/[0.04] text-white transition-colors duration-200 group-hover:border-white/28',
-          featured && 'h-11 w-11 border-white/20 bg-white/[0.06]',
-        )}
-      >
+      <span className="icon-well flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-[14px] text-white">
         {icon}
       </span>
 
       <span className="min-w-0 flex-1 text-left">
-        <span
-          className={cn(
-            'block truncate font-medium leading-tight text-white',
-            featured ? 'text-[15.5px] sm:text-base' : 'text-[14px] sm:text-[15px]',
-          )}
-        >
+        <span className="block truncate text-[18px] font-medium leading-tight tracking-[-0.01em] text-white sm:text-[19px]">
           {title}
         </span>
         {subtitle ? (
-          <span className="mt-0.5 block truncate text-[12.5px] leading-tight text-muted sm:text-[13px]">
+          <span className="mt-1.5 block truncate text-[14px] leading-tight text-muted sm:text-[15px]">
             {subtitle}
           </span>
         ) : null}
       </span>
 
-      <span className="flex shrink-0 items-center gap-1 text-muted transition-colors duration-200 group-hover:text-soft">
+      <span className="flex shrink-0 items-center gap-1.5 text-muted/80">
         {actionLabel ? (
-          <span className="hidden text-[11px] font-medium tracking-wide sm:inline">
+          <span className="hidden text-[12px] font-medium tracking-wide sm:inline">
             {actionLabel}
           </span>
         ) : null}
-        <ChevronIcon className="h-4 w-4 opacity-70" />
+        <ChevronIcon className="card-arrow h-[18px] w-[18px] transition-transform duration-[220ms] ease-out" />
       </span>
     </a>
   )
