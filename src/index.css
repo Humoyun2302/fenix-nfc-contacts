@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #070708;
-  --color-ink-soft: #0e0e10;
-  --color-graphite: #151518;
-  --color-panel: #1a1a1e;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --color-muted: #9a9aa3;
-  --color-soft: #d4d4d8;
-  --color-flame: #ff6a2b;
-  --color-flame-soft: #ff8b57;
-  --color-flame-deep: #d94d12;
+  --color-ink: #050505;
+  --color-ink-soft: #0a0a0a;
+  --color-graphite: #101010;
+  --color-panel: #141414;
+  --color-line: rgba(255, 255, 255, 0.14);
+  --color-muted: #9a9a9a;
+  --color-soft: #d6d6d6;
   --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
   --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
@@ -25,6 +22,7 @@
     @apply bg-ink text-white antialiased;
     font-family: var(--font-body);
     min-height: 100dvh;
+    background-image: linear-gradient(180deg, #050505 0%, #101010 100%);
   }
 
   #root {
@@ -32,12 +30,12 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--color-flame) 40%, transparent);
+    background: rgba(255, 255, 255, 0.22);
     color: white;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-flame);
+    outline: 2px solid rgba(255, 255, 255, 0.72);
     outline-offset: 3px;
   }
 }
@@ -51,41 +49,28 @@
     background:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.06) 0%,
-        rgba(255, 255, 255, 0.02) 40%,
-        rgba(255, 255, 255, 0.015) 100%
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0.03) 42%,
+        rgba(255, 255, 255, 0.02) 100%
       ),
-      rgba(26, 26, 30, 0.55);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.08) inset,
-      0 -1px 0 rgba(0, 0, 0, 0.35) inset,
-      0 24px 48px rgba(0, 0, 0, 0.35),
-      0 0 0 1px rgba(255, 106, 43, 0.04);
-    backdrop-filter: blur(22px) saturate(140%);
-    -webkit-backdrop-filter: blur(22px) saturate(140%);
-  }
-
-  .glass-chip {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
-      rgba(20, 20, 24, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+      rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.06) inset,
-      0 10px 28px rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(16px) saturate(130%);
-    -webkit-backdrop-filter: blur(16px) saturate(130%);
+      0 -1px 0 rgba(0, 0, 0, 0.45) inset,
+      0 20px 48px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
   }
 
   .contact-link {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.015)),
-      rgba(18, 18, 22, 0.72);
-    border: 1px solid rgba(255, 255, 255, 0.09);
+      linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+      rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.05) inset,
-      0 8px 24px rgba(0, 0, 0, 0.25);
+      0 10px 28px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     transition:
@@ -96,67 +81,82 @@
   }
 
   .contact-link:hover {
-    border-color: rgba(255, 106, 43, 0.42);
+    border-color: rgba(255, 255, 255, 0.28);
     box-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.07) inset,
-      0 12px 32px rgba(0, 0, 0, 0.32),
-      0 0 0 1px rgba(255, 106, 43, 0.12),
-      0 0 28px rgba(255, 106, 43, 0.12);
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 14px 34px rgba(0, 0, 0, 0.36),
+      0 0 24px rgba(255, 255, 255, 0.06);
     transform: translateY(-1px);
   }
 
   .contact-link:active {
-    transform: scale(0.985);
+    transform: scale(0.98);
+  }
+
+  .contact-link-featured {
+    min-height: 64px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+      rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 14px 36px rgba(0, 0, 0, 0.34),
+      0 0 0 1px rgba(255, 255, 255, 0.04);
+  }
+
+  .contact-link-featured:hover {
+    border-color: rgba(255, 255, 255, 0.34);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.1) inset,
+      0 16px 40px rgba(0, 0, 0, 0.4),
+      0 0 28px rgba(255, 255, 255, 0.08);
   }
 
   .noise-layer {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
-    opacity: 0.035;
+    opacity: 0.028;
     mix-blend-mode: soft-light;
   }
 
-  .grid-fade {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 48px 48px;
-    mask-image: radial-gradient(ellipse at center, black 15%, transparent 72%);
+  .wave-fade {
+    background:
+      radial-gradient(ellipse 70% 40% at 50% 0%, rgba(255, 255, 255, 0.07), transparent 60%),
+      radial-gradient(ellipse 45% 30% at 15% 70%, rgba(255, 255, 255, 0.035), transparent 55%),
+      radial-gradient(ellipse 40% 28% at 85% 75%, rgba(255, 255, 255, 0.03), transparent 55%);
   }
 
   .animate-enter {
-    animation: enter-up 480ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: enter-up 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .stagger-1 {
-    animation-delay: 60ms;
+    animation-delay: 50ms;
   }
   .stagger-2 {
-    animation-delay: 110ms;
+    animation-delay: 100ms;
   }
   .stagger-3 {
-    animation-delay: 160ms;
+    animation-delay: 150ms;
   }
   .stagger-4 {
-    animation-delay: 210ms;
+    animation-delay: 200ms;
   }
   .stagger-5 {
-    animation-delay: 260ms;
+    animation-delay: 250ms;
   }
   .stagger-6 {
-    animation-delay: 310ms;
+    animation-delay: 300ms;
   }
   .stagger-7 {
-    animation-delay: 360ms;
-  }
-  .stagger-8 {
-    animation-delay: 410ms;
+    animation-delay: 350ms;
   }
 }
 
 @keyframes enter-up {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;

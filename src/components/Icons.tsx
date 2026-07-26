@@ -1,23 +1,5 @@
 type IconProps = {
   className?: string
-  title?: string
-}
-
-export function NfcMark({ className, title = 'Fenix NFC' }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 32 32"
-      fill="none"
-      className={className}
-      aria-hidden={title ? undefined : true}
-      role={title ? 'img' : undefined}
-    >
-      {title ? <title>{title}</title> : null}
-      <circle cx="16" cy="16" r="13" stroke="currentColor" strokeOpacity="0.35" strokeWidth="1.5" />
-      <circle cx="16" cy="16" r="8.5" stroke="currentColor" strokeOpacity="0.7" strokeWidth="1.5" />
-      <circle cx="16" cy="16" r="3" fill="currentColor" />
-    </svg>
-  )
 }
 
 export function PhoneIcon({ className }: IconProps) {
