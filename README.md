@@ -16,6 +16,10 @@ npm run build
 npm run preview
 ```
 
+## Live
+
+https://fenix-nfc-contacts.netlify.app
+
 ## Deploy
 
-Deployed on Netlify via GitHub.
+Deployed on Netlify with continuous deployment from GitHub (`main`).
