@@ -5,9 +5,9 @@ import { InstagramIcon, PhoneIcon, TelegramIcon } from '@/components/Icons'
 
 export function ProfileCard() {
   return (
-    <div className="page-shell mx-auto flex w-full flex-col gap-3">
+    <div className="page-shell mx-auto flex w-full flex-col gap-2.5">
       <ContactSection label="Телефон" className="animate-enter stagger-2">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2.5">
           {contacts.map((person) => (
             <ContactButton
               key={person.id}
@@ -15,7 +15,7 @@ export function ProfileCard() {
               title={person.shortName}
               subtitle={person.phone.display}
               ariaLabel={`Позвонить ${person.shortName}, ${person.phone.display}`}
-              icon={<PhoneIcon className="h-5 w-5" />}
+              icon={<PhoneIcon className="h-[18px] w-[18px]" />}
             />
           ))}
         </div>
@@ -27,12 +27,12 @@ export function ProfileCard() {
           title="Instagram"
           external
           ariaLabel="Instagram"
-          icon={<InstagramIcon className="h-5 w-5" />}
+          icon={<InstagramIcon className="h-[18px] w-[18px]" />}
         />
       </ContactSection>
 
       <ContactSection label="Telegram" className="animate-enter stagger-4">
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2.5">
           {contacts.map((person) => (
             <ContactButton
               key={`${person.id}-tg`}
@@ -40,7 +40,7 @@ export function ProfileCard() {
               title={person.shortName}
               external
               ariaLabel={`Telegram ${person.shortName}`}
-              icon={<TelegramIcon className="h-5 w-5" />}
+              icon={<TelegramIcon className="h-[18px] w-[18px]" />}
             />
           ))}
         </div>
