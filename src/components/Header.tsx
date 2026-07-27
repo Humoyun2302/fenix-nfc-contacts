@@ -7,11 +7,11 @@ export function Header() {
         <div className="logo-halo absolute left-1/2 top-0 h-52 w-52 -translate-x-1/2 rounded-full" />
 
         <img
-          src="/fenix-symbol-black.png"
+          src="/fenix-f.png"
           alt="Fenix NFC"
           width={130}
           height={130}
-          className="animate-enter relative h-[130px] w-[130px] object-contain mix-blend-multiply sm:h-[140px] sm:w-[140px]"
+          className="animate-enter relative h-[130px] w-[130px] object-contain sm:h-[140px] sm:w-[140px]"
           decoding="async"
         />
 
