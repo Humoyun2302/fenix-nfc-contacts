@@ -5,9 +5,9 @@ import { InstagramIcon, PhoneIcon, TelegramIcon } from '@/components/Icons'
 
 export function ProfileCard() {
   return (
-    <div className="page-shell mx-auto flex w-full flex-col gap-3.5">
+    <div className="page-shell mx-auto flex w-full flex-col gap-3">
       <ContactSection label="Телефон" className="animate-enter stagger-2">
-        <div className="flex flex-col gap-3.5">
+        <div className="flex flex-col gap-3">
           {contacts.map((person) => (
             <ContactButton
               key={person.id}
@@ -32,7 +32,7 @@ export function ProfileCard() {
       </ContactSection>
 
       <ContactSection label="Telegram" className="animate-enter stagger-4">
-        <div className="flex flex-col gap-3.5">
+        <div className="flex flex-col gap-3">
           {contacts.map((person) => (
             <ContactButton
               key={`${person.id}-tg`}
