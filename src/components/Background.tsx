@@ -1,32 +1,13 @@
 export function Background() {
   return (
     <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
-      <div className="absolute inset-0 bg-[#050505]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(255,255,255,0.05),transparent_55%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,#050505_0%,#090909_55%,#0d0d0f_100%)]" />
+      <div className="absolute inset-0 bg-[#eef2f7]" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#f5f8fc_0%,#e8eef6_48%,#e3eaf3_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_50%_-5%,rgba(190,215,245,0.55),transparent_60%)]" />
 
-      {/* Soft halo behind brand area */}
-      <div className="absolute left-1/2 top-[7%] h-[280px] w-[280px] -translate-x-1/2 rounded-full bg-white/[0.045] blur-[90px]" />
-
-      {/* Faint NFC rings */}
-      <div className="absolute left-1/2 top-[4.5rem] h-[320px] w-[320px] -translate-x-1/2">
-        <div className="absolute inset-[18%] rounded-full border border-white/[0.035]" />
-        <div className="absolute inset-[30%] rounded-full border border-white/[0.04]" />
-        <div className="absolute inset-[42%] rounded-full border border-white/[0.045]" />
-        <div className="absolute inset-[54%] rounded-full border border-white/[0.03]" />
-      </div>
-
-      {/* Tiny technical crosshairs */}
-      <div className="absolute left-[12%] top-[18%] h-3 w-3 opacity-[0.12]">
-        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white" />
-        <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-white" />
-      </div>
-      <div className="absolute right-[14%] top-[22%] h-3 w-3 opacity-[0.1]">
-        <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-white" />
-        <div className="absolute left-0 top-1/2 h-px w-full -translate-y-1/2 bg-white" />
-      </div>
-      <div className="absolute left-[18%] bottom-[24%] h-px w-10 bg-white/[0.06]" />
-      <div className="absolute right-[16%] bottom-[28%] h-px w-8 bg-white/[0.05]" />
+      <div className="absolute left-[-10%] top-[12%] h-72 w-72 rounded-full bg-[#c9daf0]/35 blur-[90px]" />
+      <div className="absolute right-[-8%] top-[28%] h-64 w-64 rounded-full bg-[#d7e4f5]/40 blur-[100px]" />
+      <div className="absolute bottom-[8%] left-[20%] h-80 w-80 rounded-full bg-[#bfd2ea]/25 blur-[110px]" />
 
       <div className="noise-layer absolute inset-0" />
     </div>

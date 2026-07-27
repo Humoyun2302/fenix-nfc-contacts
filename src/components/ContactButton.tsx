@@ -28,7 +28,7 @@ export function ContactButton({
     <a
       href={href}
       className={cn(
-        'contact-card group flex min-h-[72px] w-full items-center gap-3 rounded-[18px] px-3.5 py-2',
+        'contact-card group flex min-h-[72px] w-full items-center gap-3 rounded-[26px] px-3.5 py-2',
         className,
       )}
       aria-label={ariaLabel}
@@ -36,12 +36,12 @@ export function ContactButton({
         ? { target: '_blank', rel: 'noopener noreferrer' }
         : {})}
     >
-      <span className="icon-well flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-[12px] text-white">
+      <span className="icon-well flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-[14px] text-ink">
         {icon}
       </span>
 
       <span className="min-w-0 flex-1 text-left">
-        <span className="block truncate text-[16px] font-medium leading-tight tracking-[-0.01em] text-white sm:text-[17px]">
+        <span className="block truncate text-[16px] font-medium leading-tight tracking-[-0.01em] text-ink sm:text-[17px]">
           {title}
         </span>
         {subtitle ? (
@@ -51,7 +51,7 @@ export function ContactButton({
         ) : null}
       </span>
 
-      <span className="flex shrink-0 items-center gap-1.5 text-muted/80">
+      <span className="flex shrink-0 items-center gap-1.5 text-muted">
         {actionLabel ? (
           <span className="hidden text-[12px] font-medium tracking-wide sm:inline">
             {actionLabel}
