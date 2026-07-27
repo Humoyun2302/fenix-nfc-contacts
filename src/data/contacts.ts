@@ -1,6 +1,7 @@
 export type ContactPerson = {
   id: string
   name: string
+  shortName: string
   phone: {
     display: string
     href: string
@@ -16,8 +17,6 @@ export const siteConfig = {
   title: 'Fenix NFC — Контакты',
   description: 'Контакты Fenix NFC: телефон, Instagram и Telegram.',
   ogDescription: 'Свяжитесь с командой Fenix NFC удобным способом.',
-  subtitle: 'Связаться с нами',
-  tagline: 'One tap. Share, connect, simplify.',
   footerBrand: 'Fenix NFC',
   footerTagline: 'NFC solutions for modern connections',
   copyright: '© 2026 Fenix NFC',
@@ -31,6 +30,7 @@ export const contacts: ContactPerson[] = [
   {
     id: 'humoyun',
     name: 'Humoyun Zoirov',
+    shortName: 'Humoyun',
     phone: {
       display: '+998 90 920 55 30',
       href: 'tel:+998909205530',
@@ -43,6 +43,7 @@ export const contacts: ContactPerson[] = [
   {
     id: 'fozilbek',
     name: 'Fozilbek Shavkatov',
+    shortName: 'Fozilbek',
     phone: {
       display: '+998 99 870 17 87',
       href: 'tel:+998998701787',

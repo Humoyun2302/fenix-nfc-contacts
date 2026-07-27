@@ -9,7 +9,7 @@ type ContactSectionProps = {
 
 export function ContactSection({ label, children, className }: ContactSectionProps) {
   return (
-    <section className={cn('space-y-3', className)} aria-label={label}>
+    <section className={cn('space-y-2.5', className)} aria-label={label}>
       <h2 className="px-1 text-[11px] font-medium uppercase tracking-[0.18em] text-muted/75">
         {label}
       </h2>

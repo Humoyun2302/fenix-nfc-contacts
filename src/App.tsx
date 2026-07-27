@@ -8,7 +8,7 @@ export default function App() {
     <div className="relative flex min-h-dvh flex-col">
       <Background />
       <Header />
-      <main className="mx-auto flex w-full flex-1 flex-col justify-center py-10 sm:py-12">
+      <main className="mx-auto flex w-full flex-1 flex-col justify-center py-6 sm:py-8">
         <ProfileCard />
       </main>
       <Footer />
