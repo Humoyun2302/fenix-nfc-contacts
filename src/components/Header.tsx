@@ -11,11 +11,11 @@ export function Header() {
           alt="Fenix NFC"
           width={130}
           height={130}
-          className="animate-enter relative h-[130px] w-[130px] object-contain sm:h-[140px] sm:w-[140px]"
+          className="animate-logo relative h-[130px] w-[130px] object-contain sm:h-[140px] sm:w-[140px]"
           decoding="async"
         />
 
-        <h1 className="animate-enter stagger-1 mt-4 text-[34px] font-semibold leading-none tracking-[-0.02em] text-ink sm:text-[36px]">
+        <h1 className="animate-title stagger-1 mt-4 text-[34px] font-semibold leading-none tracking-[-0.02em] text-ink sm:text-[36px]">
           {siteConfig.name}
         </h1>
       </div>
