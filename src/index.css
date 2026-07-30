@@ -119,6 +119,10 @@
     color: rgba(16, 20, 26, 0.72);
   }
 
+  .contact-card:hover .icon-well {
+    transform: scale(1.06);
+  }
+
   .icon-well {
     background:
       linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.42) 100%),
@@ -129,6 +133,7 @@
       0 6px 14px rgba(120, 145, 175, 0.12);
     backdrop-filter: blur(12px) saturate(140%);
     -webkit-backdrop-filter: blur(12px) saturate(140%);
+    transition: transform 220ms ease;
   }
 
   .logo-halo {
@@ -138,6 +143,7 @@
       rgba(190, 215, 240, 0.18) 40%,
       transparent 70%
     );
+    animation: halo-pulse 5.5s ease-in-out infinite;
   }
 
   .noise-layer {
@@ -146,44 +152,178 @@
     mix-blend-mode: soft-light;
   }
 
+  .blob {
+    will-change: transform;
+  }
+
+  .blob-1 {
+    animation: blob-drift-a 18s ease-in-out infinite;
+  }
+
+  .blob-2 {
+    animation: blob-drift-b 22s ease-in-out infinite;
+  }
+
+  .blob-3 {
+    animation: blob-drift-c 26s ease-in-out infinite;
+  }
+
   .animate-enter {
-    animation: enter-up 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation: enter-up 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .animate-logo {
+    animation:
+      logo-enter 700ms cubic-bezier(0.22, 1, 0.36, 1) both,
+      logo-float 6s ease-in-out 700ms infinite;
+  }
+
+  .animate-title {
+    animation: title-enter 640ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
 
   .stagger-1 {
-    animation-delay: 40ms;
+    animation-delay: 60ms;
   }
   .stagger-2 {
-    animation-delay: 80ms;
-  }
-  .stagger-3 {
     animation-delay: 120ms;
   }
+  .stagger-3 {
+    animation-delay: 180ms;
+  }
   .stagger-4 {
-    animation-delay: 160ms;
-  }
-  .stagger-5 {
-    animation-delay: 200ms;
-  }
-  .stagger-6 {
     animation-delay: 240ms;
   }
+  .stagger-5 {
+    animation-delay: 300ms;
+  }
+  .stagger-6 {
+    animation-delay: 360ms;
+  }
   .stagger-7 {
-    animation-delay: 280ms;
+    animation-delay: 420ms;
   }
   .stagger-8 {
-    animation-delay: 320ms;
+    animation-delay: 480ms;
+  }
+  .stagger-9 {
+    animation-delay: 540ms;
+  }
+  .stagger-10 {
+    animation-delay: 600ms;
+  }
+
+  .footer-rule {
+    transform-origin: center;
+    animation: rule-draw 700ms ease both;
+    animation-delay: 520ms;
   }
 }
 
 @keyframes enter-up {
   from {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes logo-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes logo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes title-enter {
+  from {
+    opacity: 0;
+    letter-spacing: 0.04em;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: -0.02em;
+    transform: translateY(0);
+  }
+}
+
+@keyframes halo-pulse {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
+@keyframes blob-drift-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, 6%) scale(1.06);
+  }
+  66% {
+    transform: translate(-3%, 3%) scale(0.96);
+  }
+}
+
+@keyframes blob-drift-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  40% {
+    transform: translate(-5%, -4%) scale(1.05);
+  }
+  70% {
+    transform: translate(3%, 5%) scale(0.97);
+  }
+}
+
+@keyframes blob-drift-c {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  35% {
+    transform: translate(5%, -3%) scale(1.04);
+  }
+  65% {
+    transform: translate(-4%, 4%) scale(0.98);
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 
@@ -201,10 +341,21 @@
     scroll-behavior: auto !important;
   }
 
-  .animate-enter {
+  .animate-enter,
+  .animate-logo,
+  .animate-title,
+  .footer-rule {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    letter-spacing: inherit !important;
+  }
+
+  .logo-halo,
+  .blob-1,
+  .blob-2,
+  .blob-3 {
+    animation: none !important;
   }
 
   .contact-card:hover,
@@ -212,7 +363,8 @@
     transform: none;
   }
 
-  .contact-card:hover .card-arrow {
+  .contact-card:hover .card-arrow,
+  .contact-card:hover .icon-well {
     transform: none;
   }
 }
