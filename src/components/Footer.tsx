@@ -2,7 +2,7 @@ import { siteConfig } from '@/data/contacts'
 
 export function Footer() {
   return (
-    <footer className="animate-enter stagger-10 px-4 pb-[max(1.75rem,env(safe-area-inset-bottom))] pt-8">
+    <footer className="animate-enter stagger-12 px-4 pb-[max(1.75rem,env(safe-area-inset-bottom))] pt-8">
       <div className="page-shell mx-auto">
         <div className="footer-rule mb-5 h-px w-full bg-[#b7c5d6]/45" aria-hidden="true" />
         <div className="flex flex-col items-center gap-1.5 text-center">

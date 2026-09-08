@@ -2,6 +2,28 @@ type IconProps = {
   className?: string
 }
 
+export function GlobeIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
+      <circle cx="12" cy="12" r="8.25" stroke="currentColor" strokeWidth="1.6" />
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="3.4"
+        ry="8.25"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M3.75 12h16.5"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  )
+}
+
 export function PhoneIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">

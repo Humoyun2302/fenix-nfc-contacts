@@ -24,6 +24,10 @@ export const siteConfig = {
     handle: '@fenix.nfc',
     href: 'https://www.instagram.com/fenix.nfc/',
   },
+  website: {
+    label: 'Website',
+    href: 'https://fenix-nfc-671.netlify.app/',
+  },
 } as const
 
 export const contacts: ContactPerson[] = [

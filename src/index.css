@@ -212,6 +212,12 @@
   .stagger-10 {
     animation-delay: 600ms;
   }
+  .stagger-11 {
+    animation-delay: 660ms;
+  }
+  .stagger-12 {
+    animation-delay: 720ms;
+  }
 
   .footer-rule {
     transform-origin: center;
